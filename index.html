@@ -1,0 +1,36 @@
+<HTML>
+	<HEAD>
+		<meta charset="utf 8">
+		<title>trabajos 2.A</title>
+	</HEAD>
+	<body>
+		<input type="text" id="buscador" placeholder="Busca por materia o trabajo..." onkeyup="filtrartrabajos()">
+		<div class="trabajo-card">
+			<h2>tutoria</h2>
+				<h3>22 de octubre del 2026</h3>
+				<h4>La conciencia de mis pensamientos y mis sensaciones</h4>
+				<img src="tut-22-oct-26.png">
+		</div>
+		<div class="trabajo-card">
+			<h2>Español</h2>
+				<h3>22 de octubre del 2026</h3>
+				<h4>Proyecto 3</h4>
+				<h5>El dinamismo de las lenguas</h5>
+				<p><b>Contenido</b>:El dinamismo de las lenguas y su evolucion como patrimonio cultural</p><br><br>
+				<p><b>P.D.A.</b><br>
+				Reconoce cambios temporales y geograficos del español,la comunidad,el pais,o el mundo hispano</p><br><br>
+				<p>Evolucion de la lengua</p><br><br>
+				<p>Como todas las lenguas el español ha evolucionado desde que surgio,hace alrededor de 1000 años,hasta nuestros dias,todos esos cambios que hemos abordado han dejado su huella en la lengua y son los que han hido dando forma.No hablamos del mismo modo que lo hacian los primeros hablantes del español,como no lo hacemos de la misma que lo gacian los primeros españoles que llegaron a america ni igual que lo hacian nuestros tatara abuelos hace 125 años.El vocabulario,las expresiones o incluso algunas construcciones sin tacticas se han modificado a lo largo de los años,aunque no lo suficiente como para que no podamos entender el español de hace 500 años.</p></div>
+		<script>
+			funcion filtrartrabajos() {
+				let input = document.getelementbyid('buscador').value.tolowercase();
+				let tarjetas = document.getelementsbiclassname('trabajo-card');
+			
+				for (let i= 0; i < tarjetas.length; i++){
+					let texto = tarjetas[i].innertext.tolowercase();
+					tarjetas[i].style.display = texto.incloudes(input)	?	""	:	"none";
+				}
+			}
+		</script>
+	</body>
+</HTML>
