@@ -48,6 +48,80 @@
             text-align: left;
         }
     </style>
+	<style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .contenedor {
+            display: inline-block;
+            margin: 15px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background: #fff;
+            vertical-align: top;
+        }
+        
+        /* Caja base de la figura */
+        .figura {
+            border: 2px solid black;
+            position: relative;
+            margin: 25px auto 15px auto;
+            background: white;
+            display: flex;
+        }
+
+        /* Divisiones internas en cuadrícula */
+        .columna {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            border-right: 1px solid black;
+        }
+        .columna:last-child {
+            border-right: none;
+        }
+        .fila {
+            flex: 1;
+            border-bottom: 1px solid black;
+        }
+        .fila:last-child {
+            border-bottom: none;
+        }
+
+        /* Tamaños proporcionales para cada figura */
+        .f-1 { width: 110px; height: 110px; }
+        .f-2 { width: 140px; height: 90px; }
+        .f-3 { width: 110px; height: 110px; }
+        .f-4 { width: 140px; height: 90px; }
+        .f-5 { width: 90px; height: 90px; }
+        .f-6 { width: 75px; height: 110px; }
+        .f-7 { width: 90px; height: 90px; }
+        .f-8 { width: 130px; height: 90px; }
+        .f-9 { width: 130px; height: 90px; }
+        .f-10 { width: 90px; height: 140px; }
+
+        /* Etiquetas de los lados */
+        .arriba { position: absolute; top: -25px; left: 50%; transform: translateX(-50%); font-weight: bold; }
+        .abajo { position: absolute; bottom: -25px; left: 50%; transform: translateX(-50%); font-weight: bold; }
+        .izquierda { position: absolute; left: -25px; top: 50%; transform: translateY(-50%); font-weight: bold; }
+        .derecha { position: absolute; right: -25px; top: 50%; transform: translateY(-50%); font-weight: bold; }
+        
+        /* Etiquetas múltiples a la izquierda */
+        .izq-superior { position: absolute; left: -25px; top: 25%; font-weight: bold; font-size: 14px; }
+        .izq-media { position: absolute; left: -25px; top: 50%; transform: translateY(-50%); font-weight: bold; font-size: 14px; }
+        .izq-inferior { position: absolute; left: -25px; bottom: 25%; font-weight: bold; font-size: 14px; }
+
+        .formulas {
+            margin-top: 10px;
+            font-size: 15px;
+            font-weight: bold;
+            text-align: left;
+        }
+    </style>	
 	</HEAD>
 	<body>
 		<input type="text" id="buscador" placeholder="Busca por materia o trabajo..." onkeyup="filtrartrabajos()">
@@ -136,6 +210,158 @@
             <p>P =</p>
             <p>A =</p>
         </div>
+		<p>Calcula el area y el perimetro de las siguientes figuras</p>
+		<div class="contenedor">
+        <div class="figura f-1" style="flex-direction: column;">
+            <span class="arriba">7</span>
+            <span class="izq-superior">b</span>
+            <span class="izq-inferior">1</span>
+            <div class="fila" style="flex: 6;"></div>
+            <div class="fila" style="flex: 1;"></div>
+        </div>
+        <div class="formulas">
+            <p>P =</p>
+            <p>A =</p>
+        </div>
+    </div>
+
+    <!-- 2. Rectángulo con divisiones m y barritas 1[span_3](start_span)[span_3](end_span) -->
+    <div class="contenedor">
+        <div class="figura f-2">
+            <span class="arriba">m</span>
+            <span class="izquierda">m</span>
+            <div class="columna" style="flex: 2;"><div class="fila"></div><div class="fila"></div></div>
+            <div class="columna" style="flex: 2;"><div class="fila"></div><div class="fila"></div></div>
+            <div class="columna" style="flex: 1;"><div class="fila"></div><div class="fila"></div></div>
+            <div class="columna" style="flex: 1;"><div class="fila"></div><div class="fila"></div></div>
+            <div class="columna" style="flex: 1;"><div class="fila"></div><div class="fila"></div></div>
+            <div class="columna" style="flex: 1;"><div class="fila"></div><div class="fila"></div></div>
+        </div>
+        <div class="formulas">
+            <p>P =</p>
+            <p>A =</p>
+        </div>
+    </div>
+
+    <!-- 3. Cuadrado con x y franja de 2[span_4](start_span)[span_4](end_span) -->
+    <div class="contenedor">
+        <div class="figura f-3" style="flex-direction: column;">
+            <span class="arriba">x</span>
+            <span class="izq-superior">x</span>
+            <span class="izq-inferior">2</span>
+            <div class="fila" style="flex: 5;"></div>
+            <div class="fila" style="flex: 1;"></div>
+        </div>
+        <div class="formulas">
+            <p>P =</p>
+            <p>A =</p>
+        </div>
+    </div>
+
+    <!-- 4. Rectángulo con 3 columnas (y) y 2 columnas de 2[span_5](start_span)[span_5](end_span) -->
+    <div class="contenedor">
+        <div class="figura f-4">
+            <span class="arriba">r</span>
+            <span class="izq-superior">y</span>
+            <span class="izq-inferior">2</span>
+            <div class="columna"><div class="fila" style="flex: 3;"></div><div class="fila" style="flex: 1;"></div></div>
+            <div class="columna"><div class="fila" style="flex: 3;"></div><div class="fila" style="flex: 1;"></div></div>
+            <div class="columna"><div class="fila" style="flex: 3;"></div><div class="fila" style="flex: 1;"></div></div>
+            <div class="columna"><div class="fila" style="flex: 3;"></div><div class="fila" style="flex: 1;"></div></div>
+            <div class="columna"><div class="fila" style="flex: 3;"></div><div class="fila" style="flex: 1;"></div></div>
+        </div>
+        <div class="formulas">
+            <p>P =</p>
+            <p>A =</p>
+        </div>
+    </div>
+
+    <!-- 5. Cuadrado simple m[span_6](start_span)[span_6](end_span) -->
+    <div class="contenedor">
+        <div class="figura f-5">
+            <span class="arriba">m</span>
+            <span class="izquierda">m</span>
+        </div>
+        <div class="formulas">
+            <p>P =</p>
+            <p>A =</p>
+        </div>
+    </div>
+
+    <!-- 6. Rectángulo m y n[span_7](start_span)[span_7](end_span) -->
+    <div class="contenedor">
+        <div class="figura f-6">
+            <span class="arriba">n</span>
+            <span class="izquierda">m</span>
+        </div>
+        <div class="formulas">
+            <p>P =</p>
+            <p>A =</p>
+        </div>
+    </div>
+
+    <!-- 7. Cuadrado n[span_8](start_span)[span_8](end_span) -->
+    <div class="contenedor">
+        <div class="figura f-7">
+            <span class="arriba">n</span>
+            <span class="izquierda">n</span>
+        </div>
+        <div class="formulas">
+            <p>P =</p>
+            <p>A =</p>
+        </div>
+    </div>
+
+    <!-- 8. Rectángulo con dos m y una n[span_9](start_span)[span_9](end_span) -->
+    <div class="contenedor">
+        <div class="figura f-8">
+            <span class="arriba">m</span>
+            <span class="izquierda">m</span>
+            <div class="columna"><div class="fila"></div></div>
+            <div class="columna"><div class="fila"></div></div>
+            <div class="columna"><div class="fila"></div></div>
+        </div>
+        <div class="formulas">
+            <p>P =</p>
+            <p>A =</p>
+        </div>
+    </div>
+
+    <!-- 9. Rectángulo con m, tres n y un bloque lateral h[span_10](start_span)[span_10](end_span) -->
+    <div class="contenedor">
+        <div class="figura f-9">
+            <span class="arriba">m</span>
+            <span class="izquierda">m</span>
+            <div class="columna" style="flex: 3;"><div class="fila" style="flex: 2;"></div><div class="fila" style="flex: 2;"></div><div class="fila" style="flex: 2;"></div></div>
+            <div class="columna" style="flex: 1;"><div class="fila" style="flex: 3;"></div><div class="fila" style="flex: 3;"></div></div>
+        </div>
+        <div class="formulas">
+            <p>P =</p>
+            <p>A =</p>
+        </div>
+    </div>
+
+    <!-- 10. Figura alta dividida con m y n[span_11](start_span)[span_11](end_span) -->
+    <div class="contenedor">
+        <div class="figura f-10" style="flex-direction: column;">
+            <span class="arriba">m</span>
+            <span class="izq-superior">m</span>
+            <span class="izq-media">n</span>
+            <span class="izq-inferior">m</span>
+            <div class="fila" style="flex: 3;"></div>
+            <div class="fila" style="flex: 1;">
+                <div style="display: flex; height: 100%;">
+                    <div style="flex: 1; border-right: 1px solid black;"></div>
+                    <div style="flex: 1;"></div>
+                </div>
+            </div>
+            <div class="fila" style="flex: 3;"></div>
+        </div>
+        <div class="formulas">
+            <p>P =</p>
+            <p>A =</p>
+        </div>
+    </div>
 		</div>
 		<div class="trabajo-card">
 			<h2>Integracion curricular</h2>
