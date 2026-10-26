@@ -10,22 +10,28 @@
         }
         .contenedor {
             display: inline-block;
-            margin: 20px;
+            margin: 15px;
             padding: 15px;
             border: 1px solid #ccc;
             border-radius: 8px;
             background: #fafafa;
+            vertical-align: top;
         }
-        /* La caja que forma la figura */
+        /* La caja que forma la figura por defecto (cuadrado) */
         .figura {
-            width: 100px;
-            height: 100px;
+            width: 90px;
+            height: 90px;
             border: 2px solid black;
             position: relative;
-            margin: 30px auto;
+            margin: 20px auto;
             background: white;
         }
-        .rectangulo {
+        /* Tamaños personalizados para los rectángulos */
+        .rectangulo-1 {
+            width: 110px;
+            height: 70px;
+        }
+        .rectangulo-2 {
             width: 130px;
             height: 70px;
         }
@@ -38,6 +44,8 @@
         .formulas {
             margin-top: 15px;
             font-size: 15px;
+            font-weight: bold;
+            text-align: left;
         }
     </style>
 	</HEAD>
@@ -71,34 +79,63 @@
 				<h4>Introduccion al algebra</h4>
 				<p>Representa algebraicamente areas que generan una expresion cuadratica.</p><br>
 				<p>Calcula el perimetro y el area de las siguientes figuras.</p>
-				<div class="contenedor">
-      		 		<div class="figura">
-            			<span class="arriba">x</span>
-            			<span class="derecha">x</span>
-       		 		</div>
-            			<p><strong>P=</strong></p>
-            			<p><strong>A=</strong></p>
-        		</div>
-					<div class="contenedor">
-        				<div class="figura rectangulo">
-            				<span class="arriba">b</span>
-            				<span class="izquierda">2</span>
-        				</div>
-       				 <div class="formulas">
-            			<p><strong>P=</strong></p>
-           				<p><strong>A=</strong></p>
-        			</div>
-    			</div>
-    			<div class="contenedor">
-        			<div class="figura">
-            			<span class="abajo">n</span>
-            			<span class="derecha">n</span>
-        			</div>
-        			<div class="formulas">
-            			<p><strong>P=</strong></p>
-            			<p><strong>A=</strong></p>
-        			</div>
-    			</div>
+				div class="contenedor">
+        <div class="figura">
+            <span class="arriba">x</span>
+            <span class="derecha">x</span>
+        </div>
+        <div class="formulas">
+            <p>P =</p>
+            <p>A =</p>
+        </div>
+    </div>
+
+    <!-- 2. Rectángulo con lados 2 y b -->
+    <div class="contenedor">
+        <div class="figura rectangulo-2">
+            <span class="arriba">b</span>
+            <span class="izquierda">2</span>
+        </div>
+        <div class="formulas">
+            <p>P =</p>
+            <p>A =</p>
+        </div>
+    </div>
+
+    <!-- 3. Cuadrado con lados n -->
+    <div class="contenedor">
+        <div class="figura">
+            <span class="abajo">n</span>
+            <span class="derecha">n</span>
+        </div>
+        <div class="formulas">
+            <p>P =</p>
+            <p>A =</p>
+        </div>
+    </div>
+
+    <!-- 4. Rectángulo con lados 5 y a -->
+    <div class="contenedor">
+        <div class="figura rectangulo-1">
+            <span class="arriba">a</span>
+            <span class="izquierda">5</span>
+        </div>
+        <div class="formulas">
+            <p>P =</p>
+            <p>A =</p>
+        </div>
+    </div>
+
+    <!-- 5. Rectángulo con lados 1 y x -->
+    <div class="contenedor">
+        <div class="figura rectangulo-1">
+            <span class="arriba">x</span>
+            <span class="izquierda">1</span>
+        </div>
+        <div class="formulas">
+            <p>P =</p>
+            <p>A =</p>
+        </div>
 		</div>
 		<div class="trabajo-card">
 			<h2>Integracion curricular</h2>
