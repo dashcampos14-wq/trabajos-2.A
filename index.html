@@ -2,6 +2,44 @@
 	<HEAD>
 		<meta charset="utf 8">
 		<title>trabajos 2.A</title>
+		<style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        .contenedor {
+            display: inline-block;
+            margin: 20px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background: #fafafa;
+        }
+        /* La caja que forma la figura */
+        .figura {
+            width: 100px;
+            height: 100px;
+            border: 2px solid black;
+            position: relative;
+            margin: 30px auto;
+            background: white;
+        }
+        .rectangulo {
+            width: 130px;
+            height: 70px;
+        }
+        /* Etiquetas de los lados */
+        .arriba { position: absolute; top: -25px; left: 50%; transform: translateX(-50%); font-weight: bold; }
+        .abajo { position: absolute; bottom: -25px; left: 50%; transform: translateX(-50%); font-weight: bold; }
+        .izquierda { position: absolute; left: -25px; top: 50%; transform: translateY(-50%); font-weight: bold; }
+        .derecha { position: absolute; right: -25px; top: 50%; transform: translateY(-50%); font-weight: bold; }
+        
+        .formulas {
+            margin-top: 15px;
+            font-size: 15px;
+        }
+    </style>
 	</HEAD>
 	<body>
 		<input type="text" id="buscador" placeholder="Busca por materia o trabajo..." onkeyup="filtrartrabajos()">
@@ -29,6 +67,38 @@
 				<p>En una sala hay mesas de distintos tamaños.En la primera mesa hay una persona,en la segunda 2,en la tercera tre y asi sucesivamente.cada persona saluda una sola vez a cada integrante de su mesa,construye la sucecion del numero de saludos de cada mesa:</p><br>br>
 				<p>¿cual es la regla general de la sucecion?</p><br>
 				<p>¿cuantos saludos se daran en la mesa 100,150 y 500?</p>
+				<h3>26 de octubre del 2026</h3>
+				<h4>Introduccion al algebra</h4>
+				<p>Representa algebraicamente areas que generan una expresion cuadratica.</p><br>
+				<p>Calcula el perimetro y el area de las siguientes figuras.</p>
+				<div class="contenedor">
+      		 		<div class="figura">
+            			<span class="arriba">x</span>
+            			<span class="derecha">x</span>
+       		 		</div>
+            			<p><strong>P=</strong></p>
+            			<p><strong>A=</strong></p>
+        		</div>
+					<div class="contenedor">
+        				<div class="figura rectangulo">
+            				<span class="arriba">b</span>
+            				<span class="izquierda">2</span>
+        				</div>
+       				 <div class="formulas">
+            			<p><strong>P=</strong></p>
+           				<p><strong>A=</strong></p>
+        			</div>
+    			</div>
+    			<div class="contenedor">
+        			<div class="figura">
+            			<span class="abajo">n</span>
+            			<span class="derecha">n</span>
+        			</div>
+        			<div class="formulas">
+            			<p><strong>P=</strong></p>
+            			<p><strong>A=</strong></p>
+        			</div>
+    			</div>
 		</div>
 		<div class="trabajo-card">
 			<h2>Integracion curricular</h2>
